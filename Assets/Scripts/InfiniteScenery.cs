@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class InfiniteScenery : MonoBehaviour
 {
+    //velocidade da imagem
     [SerializeField]
     float speed = 2f;
-
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
