@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
+    PlayerController _playerController;
+
     [SerializeField]
     float moveSpeed = 1f;
 
@@ -15,13 +17,23 @@ public class Parallax : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _playerController = FindObjectOfType(typeof(PlayerController)) as PlayerController;
+
         startPosition = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        newXposition = Mathf.Repeat(Time.time * -moveSpeed, offset);
+        if (_playerController.isLookLeft)
+        {
+            newXposition = Mathf.Repeat(Time.time * moveSpeed, offset);
+        }
+        else
+        {
+            newXposition = Mathf.Repeat(Time.time * -moveSpeed, offset);
+        }
+
         transform.position = startPosition + Vector2.right * newXposition;
     }
 }

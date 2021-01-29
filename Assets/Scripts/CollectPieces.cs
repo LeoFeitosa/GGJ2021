@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class CollectPieces : MonoBehaviour
 {
-    List<SpriteRenderer> cells = new List<SpriteRenderer>();
     SpriteRenderer[] _spriteRenderer;
-    SpriteRenderer[] _spriteRendererInactive;
     int _countInactive;
 
 

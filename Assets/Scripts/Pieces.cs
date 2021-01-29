@@ -5,7 +5,6 @@ using UnityEngine;
 public class Pieces : MonoBehaviour
 {
     PlayerController _playerController;
-    InfiniteScenery _infiniteScenery;
     CameraRotate _cameraRotate;
     CollectPieces _collectPieces;
 
@@ -22,7 +21,6 @@ public class Pieces : MonoBehaviour
     private void Start()
     {
         _playerController = FindObjectOfType(typeof(PlayerController)) as PlayerController;
-        _infiniteScenery = FindObjectOfType(typeof(InfiniteScenery)) as InfiniteScenery;
         _cameraRotate = FindObjectOfType(typeof(CameraRotate)) as CameraRotate;
         _collectPieces = FindObjectOfType(typeof(CollectPieces)) as CollectPieces;
     }
@@ -39,7 +37,6 @@ public class Pieces : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             _playerController.Flip();
-            _infiniteScenery.Flip();
             _collectPieces.HidePiece();
 
             //rotaciona a camera
