@@ -45,6 +45,7 @@ public class SpawPieces : MonoBehaviour
             //verifica o lado do player para definir o lado da instancia
             if (_playerController.isLookLeft)
             {
+                newPiece.transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
                 newPiece.transform.position = new Vector3(-newPiece.transform.position.x, newPiece.transform.position.y, newPiece.transform.position.z);
             }
 

@@ -30,6 +30,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     bool isGround;
 
+    //true = botao de pulo precionado
+    [SerializeField]
+    bool isJump;
+
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -42,7 +46,7 @@ public class PlayerController : MonoBehaviour
         //chama aofuncao de pulo caso a tecla espaco for precionada e o player estiver tocando o chao
         if (Input.GetButtonDown("Jump") && isGround)
         {
-            Jump();
+            isJump = true;
         }
 
         RunAnimations();
@@ -51,15 +55,27 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         CheckGround();
+        Jump();
     }
 
     void Jump()
     {
-        //zera a velocidade antes de aplicar a forca do pulo, isso mantem os pulos sempre da mesma altura
-        _rigidbody2D.velocity = Vector2.zero;
+        if (isJump)
+        {
+            //zera a velocidade antes de aplicar a forca do pulo, isso mantem os pulos sempre da mesma altura
+            _rigidbody2D.velocity = Vector2.zero;
 
-        // aplica forca em Y
-        _rigidbody2D.AddForce(Vector2.up * jumpForce);
+            // aplica forca em Y
+            _rigidbody2D.AddForce(Vector2.up * jumpForce);
+
+            isJump = false;
+        }
+
+        //se soltar o botao de pulo a velocidade Y é subtraida
+        if (_rigidbody2D.velocity.y > 0 && !Input.GetButton("Jump"))
+        {
+            _rigidbody2D.velocity += Vector2.up * -0.8f;
+        }
     }
 
     void CheckGround()
