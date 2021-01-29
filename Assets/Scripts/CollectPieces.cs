@@ -6,11 +6,16 @@ public class CollectPieces : MonoBehaviour
 {
     SpriteRenderer[] _spriteRenderer;
     int _countInactive;
-
+    public bool collected;
 
     void Start()
     {
         _spriteRenderer = GetComponentsInChildren<SpriteRenderer>();
+    }
+
+    private void Update()
+    {
+        collected = false;
     }
 
     public void HidePiece()
@@ -27,6 +32,7 @@ public class CollectPieces : MonoBehaviour
             {
                 _spriteRenderer[index].enabled = false;
                 _countInactive++;
+                collected = true;
             }
         }
     }
