@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Pieces : MonoBehaviour
 {
-    Camera _camera;
     PlayerController _playerController;
     InfiniteScenery _infiniteScenery;
-    SpawPieces _spawPieces;
+    CameraRotate _cameraRotate;
 
     //velocidade do movimento
     [SerializeField]
@@ -21,11 +20,9 @@ public class Pieces : MonoBehaviour
 
     private void Start()
     {
-        //pega a camera principal
-        _camera = Camera.main;
         _playerController = FindObjectOfType(typeof(PlayerController)) as PlayerController;
         _infiniteScenery = FindObjectOfType(typeof(InfiniteScenery)) as InfiniteScenery;
-        _spawPieces = FindObjectOfType(typeof(SpawPieces)) as SpawPieces;
+        _cameraRotate = FindObjectOfType(typeof(CameraRotate)) as CameraRotate;
     }
 
     void Update()
@@ -54,7 +51,9 @@ public class Pieces : MonoBehaviour
     {
         //pega um numero qualquer dos que estão preechidos
         int position = positions[Random.Range(0, positions.Length)];
-        _camera.transform.Rotate(new Vector3(0, 0, position));
+
+        //rotaciona a camera
+        _cameraRotate.Rotate(position);
     }
 
     private void Flip()
