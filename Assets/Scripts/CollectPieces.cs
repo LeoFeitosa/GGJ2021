@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class CollectPieces : MonoBehaviour
 {
+    List<SpriteRenderer> cells = new List<SpriteRenderer>();
     SpriteRenderer[] _spriteRenderer;
-    int _spriteRendererSize;
+    SpriteRenderer[] _spriteRendererInactive;
+    int _countInactive;
 
 
     void Start()
@@ -15,24 +17,19 @@ public class CollectPieces : MonoBehaviour
 
     public void HidePiece()
     {
-        int index = Random.Range(0, _spriteRenderer.Length);
-
-        if (!_spriteRenderer[index].enabled)
+        if (_countInactive < _spriteRenderer.Length)
         {
-            //HidePiece();
-        }
-        else
-        {
-            _spriteRenderer[index].enabled = false;
-        }
+            int index = Random.Range(0, _spriteRenderer.Length);
 
-        _spriteRendererSize += 1;
-
-        if (_spriteRendererSize >= _spriteRenderer.Length)
-        {
-            return;
+            if (!_spriteRenderer[index].enabled)
+            {
+                HidePiece();
+            }
+            else
+            {
+                _spriteRenderer[index].enabled = false;
+                _countInactive++;
+            }
         }
-
-        print(index);
     }
 }
