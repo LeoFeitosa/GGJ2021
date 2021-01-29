@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float jumpForce = 400;
 
+    //direcao do layer
+    public bool isLookLeft;
+
     //layer que identifica o chao
     [SerializeField]
     LayerMask layerGround;
@@ -70,5 +73,13 @@ public class PlayerController : MonoBehaviour
         // envia os parametros para as funcoes que vao acionar as animacoes
         _playerAnimator.SetGrounded(isGround);
         _playerAnimator.SetSpeedY(_rigidbody2D.velocity.y);
+    }
+
+    public void Flip()
+    {
+        isLookLeft = !isLookLeft;
+        float x = transform.localScale.x * -1;
+        transform.localScale = new Vector3(x, transform.localScale.y, transform.localScale.z);
+        transform.position = new Vector3(-transform.position.x, transform.position.y, transform.position.z);
     }
 }

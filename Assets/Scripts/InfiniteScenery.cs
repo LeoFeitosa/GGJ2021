@@ -14,4 +14,9 @@ public class InfiniteScenery : MonoBehaviour
         Vector2 offset = new Vector2(Time.time * speed, 0);
         GetComponent<Renderer>().material.mainTextureOffset = offset;
     }
+
+    public void Flip()
+    {
+        speed *= -1;
+    }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpawPieces : MonoBehaviour
 {
+    PlayerController _playerController;
+
     [SerializeField]
     GameObject piece;
 
@@ -20,6 +22,8 @@ public class SpawPieces : MonoBehaviour
 
     void Start()
     {
+        _playerController = FindObjectOfType(typeof(PlayerController)) as PlayerController;
+
         //cria uma nova instanica da peca
         GameObject newPiece = Instantiate(piece);
 
@@ -37,7 +41,13 @@ public class SpawPieces : MonoBehaviour
 
             //modifica randomicamenta a altura da peca Y
             newPiece.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), 0);
-            
+
+            //verifica o lado do player para definir o lado da instancia
+            if (_playerController.isLookLeft)
+            {
+                newPiece.transform.position = new Vector3(-newPiece.transform.position.x, newPiece.transform.position.y, newPiece.transform.position.z);
+            }
+
             //destro o objeto depois de um tempo
             Destroy(newPiece, destroyTime);
 
