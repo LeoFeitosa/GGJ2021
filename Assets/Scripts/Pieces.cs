@@ -4,9 +4,21 @@ using UnityEngine;
 
 public class Pieces : MonoBehaviour
 {
+    Camera _camera;
+
     //velocidade do movimento
     [SerializeField]
     float speed;
+
+    //posiveis posicoes da camera
+    [SerializeField]
+    int[] positions;
+
+    private void Start()
+    {
+        //pega a camera principal
+        _camera = Camera.main;
+    }
 
     void Update()
     {
@@ -19,7 +31,18 @@ public class Pieces : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            //se colidir com o player rotaciona a camera
+            RotateRandom();
+
+            //destroi a peca que colidiu
             Destroy(this.gameObject);
         }
+    }
+
+    private void RotateRandom()
+    {
+        //pega um numero qualquer dos que estão preechidos
+        int position = positions[Random.Range(0, positions.Length)];
+        _camera.transform.Rotate(new Vector3(0, 0, position));
     }
 }
