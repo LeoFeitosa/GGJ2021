@@ -7,6 +7,7 @@ public class Pieces : MonoBehaviour
     PlayerController _playerController;
     InfiniteScenery _infiniteScenery;
     CameraRotate _cameraRotate;
+    CollectPieces _collectPieces;
 
     //velocidade do movimento
     [SerializeField]
@@ -23,6 +24,7 @@ public class Pieces : MonoBehaviour
         _playerController = FindObjectOfType(typeof(PlayerController)) as PlayerController;
         _infiniteScenery = FindObjectOfType(typeof(InfiniteScenery)) as InfiniteScenery;
         _cameraRotate = FindObjectOfType(typeof(CameraRotate)) as CameraRotate;
+        _collectPieces = FindObjectOfType(typeof(CollectPieces)) as CollectPieces;
     }
 
     void Update()
@@ -38,6 +40,7 @@ public class Pieces : MonoBehaviour
         {
             _playerController.Flip();
             _infiniteScenery.Flip();
+            _collectPieces.HidePiece();
 
             //rotaciona a camera
             RotateRandom();
