@@ -131,7 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 31800678}
   - component: {fileID: 31800679}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: peca_ (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1691607063
   m_SortingLayer: -1
-  m_SortingOrder: -1
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 88a0437d72a218846b5f9aae9e009be7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -293,7 +293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 147912320}
   - component: {fileID: 147912321}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: peca_ (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1691607063
   m_SortingLayer: -1
-  m_SortingOrder: -1
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 632a40f32d56e4d49a29dc211aaf8e54, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -374,7 +374,7 @@ GameObject:
   m_Component:
   - component: {fileID: 270796313}
   - component: {fileID: 270796314}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PiecesBlack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -632,7 +632,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 574731910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1371985599}
@@ -784,7 +784,7 @@ GameObject:
   m_Component:
   - component: {fileID: 891985067}
   - component: {fileID: 891985068}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: peca_ (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -843,7 +843,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1691607063
   m_SortingLayer: -1
-  m_SortingOrder: -1
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: cd843904222d00e4aac8896175153b85, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1092,7 +1092,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1099413689}
   - component: {fileID: 1099413690}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: peca_ (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1151,7 +1151,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1691607063
   m_SortingLayer: -1
-  m_SortingOrder: -1
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: b1e99d6e9b1757b469fb8ff229f1b7b1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1362,7 +1362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1148922241}
   - component: {fileID: 1148922242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: peca_ (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1421,7 +1421,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1691607063
   m_SortingLayer: -1
-  m_SortingOrder: -1
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: ae6f0d099daffe1498cb29d846d0bff4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1443,7 +1443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1163830376}
   - component: {fileID: 1163830377}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: peca_ (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1502,7 +1502,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1691607063
   m_SortingLayer: -1
-  m_SortingOrder: -1
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: edbd441cd76279047886a3b8e883a99a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1524,7 +1524,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1279492394}
   - component: {fileID: 1279492395}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: peca_ (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1583,7 +1583,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1691607063
   m_SortingLayer: -1
-  m_SortingOrder: -1
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 0ff8c21e94422564d86456e22b488294, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1748,7 +1748,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1494209410}
   - component: {fileID: 1494209411}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: peca_ (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1807,7 +1807,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1691607063
   m_SortingLayer: -1
-  m_SortingOrder: -1
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 121ccd97ddee11f49a91e88358a0dbf0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2071,7 +2071,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1657541242}
   - component: {fileID: 1657541243}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: peca_ (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2130,7 +2130,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1691607063
   m_SortingLayer: -1
-  m_SortingOrder: -1
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 2151cae59155f414e9d527cabf14d5c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2314,7 +2314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1743967061}
   - component: {fileID: 1743967062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: peca_ (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2373,7 +2373,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1691607063
   m_SortingLayer: -1
-  m_SortingOrder: -1
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 16f6f106dfde8b84aa8b131343a4185a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2395,7 +2395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1784597654}
   - component: {fileID: 1784597655}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: peca_ (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2454,7 +2454,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1691607063
   m_SortingLayer: -1
-  m_SortingOrder: -1
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: f2f81b674399da54bb48a5131f070ca8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2476,7 +2476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1944999593}
   - component: {fileID: 1944999594}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: peca_ (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2535,7 +2535,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1691607063
   m_SortingLayer: -1
-  m_SortingOrder: -1
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 3ec17328317d7af4aa75c44c16705b6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
