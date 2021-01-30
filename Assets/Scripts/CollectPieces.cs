@@ -5,12 +5,15 @@ using UnityEngine;
 public class CollectPieces : MonoBehaviour
 {
     SpriteRenderer[] _spriteRenderer;
+    SoundController _soundController;
+
     int _countInactive;
     public bool collected;
 
     void Start()
     {
         _spriteRenderer = GetComponentsInChildren<SpriteRenderer>();
+        _soundController = FindObjectOfType(typeof(SoundController)) as SoundController;
     }
 
     private void Update()
@@ -30,6 +33,7 @@ public class CollectPieces : MonoBehaviour
             }
             else
             {
+                _soundController.EffectSound("Piece");
                 _spriteRenderer[index].enabled = false;
                 _countInactive++;
                 collected = true;

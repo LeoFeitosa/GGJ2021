@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D _rigidbody2D;
     PlayerAnimator _playerAnimator;
     SpriteRenderer _spriteRenderer;
+    SoundController _soundController;
 
     //forca do pulo
     [SerializeField]
@@ -48,6 +49,7 @@ public class PlayerController : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _playerAnimator = GetComponentInChildren<PlayerAnimator>();
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        _soundController = FindObjectOfType(typeof(SoundController)) as SoundController;
     }
 
     // Update is called once per frame
@@ -72,6 +74,8 @@ public class PlayerController : MonoBehaviour
     {
         if (isJump)
         {
+            _soundController.EffectSound("Jump");
+
             //zera a velocidade antes de aplicar a forca do pulo, isso mantem os pulos sempre da mesma altura
             _rigidbody2D.velocity = Vector2.zero;
 
@@ -111,6 +115,7 @@ public class PlayerController : MonoBehaviour
 
     public void Damage()
     {
+        _soundController.EffectSound("Damage");
         StartCoroutine(DamageController());
     }
 
