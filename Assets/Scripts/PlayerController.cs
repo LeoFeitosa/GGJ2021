@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     Rigidbody2D _rigidbody2D;
     PlayerAnimator _playerAnimator;
+    SpriteRenderer _spriteRenderer;
 
     //forca do pulo
     [SerializeField]
@@ -34,10 +35,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     bool isJump;
 
+    //cor quando toma dano
+    [SerializeField]
+    Color hitColor;
+
+    //cor padrao
+    [SerializeField]
+    Color defaultColor;
+
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _playerAnimator = GetComponentInChildren<PlayerAnimator>();
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -97,5 +107,30 @@ public class PlayerController : MonoBehaviour
         float x = transform.localScale.x * -1;
         transform.localScale = new Vector3(x, transform.localScale.y, transform.localScale.z);
         transform.position = new Vector3(-transform.position.x, transform.position.y, transform.position.z);
+    }
+
+    public void Damage()
+    {
+        StartCoroutine(DamageController());
+    }
+
+    IEnumerator DamageController()
+    {
+        this.gameObject.layer = LayerMask.NameToLayer("Default");
+
+        _spriteRenderer.color = hitColor;
+        yield return new WaitForSeconds(0.3f);
+        _spriteRenderer.color = defaultColor;
+
+        for (int i = 0; i <= 5; i++)
+        {
+            _spriteRenderer.enabled = false;
+            yield return new WaitForSeconds(0.2f);
+            _spriteRenderer.enabled = true;
+            yield return new WaitForSeconds(0.2f);
+        }
+
+        this.gameObject.layer = LayerMask.NameToLayer("Player");
+        _spriteRenderer.color = Color.white;
     }
 }

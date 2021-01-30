@@ -29,6 +29,7 @@ public class Obstacles : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            _playerController.Damage();
             //destroi a peca que colidiu
             Destroy(this.gameObject);
         }
@@ -49,11 +50,5 @@ public class Obstacles : MonoBehaviour
             transform.position -= direction * speed * Time.deltaTime;
             _spriteRenderer.flipX = true;
         }
-    }
-
-    //se sair da tela é destruido
-    void OnBecameInvisible()
-    {
-        Destroy(gameObject);
     }
 }
