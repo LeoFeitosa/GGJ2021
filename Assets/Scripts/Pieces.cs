@@ -54,6 +54,11 @@ public class Pieces : MonoBehaviour
 
         //rotaciona a camera
         _cameraRotate.Rotate(position);
+
+        if (_collectPieces.stopSpaw)
+        {
+            StartCoroutine(PositionCamereDefault());
+        }
     }
 
     private void Flip()
@@ -69,5 +74,11 @@ public class Pieces : MonoBehaviour
             direction = Vector3.right;
             transform.position -= direction * speed * Time.deltaTime;
         }
+    }
+
+    IEnumerator PositionCamereDefault()
+    {
+        _cameraRotate.Rotate(0);
+        yield return new WaitForSeconds(4f);
     }
 }

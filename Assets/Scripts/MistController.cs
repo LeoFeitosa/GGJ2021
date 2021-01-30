@@ -20,7 +20,7 @@ public class MistController : MonoBehaviour
     {
         if (_collectPieces.collected)
         {
-            transparence -= 0.08f;
+            transparence -= 0.042f;
         }
         if (transparence <= 0)
         {

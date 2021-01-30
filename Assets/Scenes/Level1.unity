@@ -582,6 +582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collected: 0
+  stopSpaw: 0
 --- !u!1 &347277483
 GameObject:
   m_ObjectHideFlags: 0

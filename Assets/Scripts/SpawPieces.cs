@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawPieces : MonoBehaviour
 {
     PlayerController _playerController;
+    CollectPieces _collectPieces;
 
     [SerializeField]
     GameObject piece;
@@ -23,6 +24,7 @@ public class SpawPieces : MonoBehaviour
     void Start()
     {
         _playerController = FindObjectOfType(typeof(PlayerController)) as PlayerController;
+        _collectPieces = FindObjectOfType(typeof(CollectPieces)) as CollectPieces;
 
         //cria uma nova instanica da peca
         GameObject newPiece = Instantiate(piece);
@@ -34,7 +36,7 @@ public class SpawPieces : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer > maxTime)
+        if (timer > maxTime && !_collectPieces.stopSpaw)
         {
             //cria uma nova instanica da peca
             GameObject newPiece = Instantiate(piece);

@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawObstacles : MonoBehaviour
 {
     PlayerController _playerController;
+    CollectPieces _collectPieces;
 
     [SerializeField]
     GameObject obstacle1;
@@ -31,6 +32,7 @@ public class SpawObstacles : MonoBehaviour
     void Start()
     {
         _playerController = FindObjectOfType(typeof(PlayerController)) as PlayerController;
+        _collectPieces = FindObjectOfType(typeof(CollectPieces)) as CollectPieces;
     }
 
     // Update is called once per frame
@@ -41,7 +43,7 @@ public class SpawObstacles : MonoBehaviour
 
     void GetObstacle()
     {
-        if (timer > maxTime)
+        if (timer > maxTime && !_collectPieces.stopSpaw)
         {
             int rand = Random.Range(0, 4);
             if (rand == 1)

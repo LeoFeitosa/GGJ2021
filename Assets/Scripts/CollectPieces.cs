@@ -9,6 +9,7 @@ public class CollectPieces : MonoBehaviour
 
     int _countInactive;
     public bool collected;
+    public bool stopSpaw = false;
 
     void Start()
     {
@@ -16,9 +17,9 @@ public class CollectPieces : MonoBehaviour
         _soundController = FindObjectOfType(typeof(SoundController)) as SoundController;
     }
 
-    private void Update()
+    void Update()
     {
-        collected = false;
+        //collected = false;
     }
 
     public void HidePiece()
@@ -37,7 +38,19 @@ public class CollectPieces : MonoBehaviour
                 _spriteRenderer[index].enabled = false;
                 _countInactive++;
                 collected = true;
+                StartCoroutine(DisableCollected());
             }
         }
+
+        if (_countInactive == _spriteRenderer.Length)
+        {
+            stopSpaw = true;
+        }
+    }
+
+    IEnumerator DisableCollected()
+    {
+        yield return new WaitForSeconds(0.01f);
+        collected = false;
     }
 }
