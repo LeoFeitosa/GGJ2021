@@ -56,7 +56,7 @@ public class CameraRotate : MonoBehaviour
 
         Vector3 direction = Vector3.zero;
 
-        if (rand > 50)
+        if (rand % 2 == 0)
         {
             direction = new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, angle);
             targetRotation = Quaternion.Euler(direction * -1);
