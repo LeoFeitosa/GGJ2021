@@ -6,6 +6,7 @@ public class Obstacles : MonoBehaviour
 {
     PlayerController _playerController;
     SpriteRenderer _spriteRenderer;
+    CollectPieces _collectPieces;
 
     //velocidade do movimento
     [SerializeField]
@@ -17,10 +18,20 @@ public class Obstacles : MonoBehaviour
     {
         _playerController = FindObjectOfType(typeof(PlayerController)) as PlayerController;
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _collectPieces = FindObjectOfType(typeof(CollectPieces)) as CollectPieces;
     }
 
     void Update()
     {
+        if (transform.position.x < 10)
+        {
+            _spriteRenderer.flipX = true;
+        }
+        if (transform.position.x > -10)
+        {
+            _spriteRenderer.flipX = false;
+        }
+
         //movimenta o obstaculo da direita para esquerda
         Flip();
     }
@@ -30,25 +41,24 @@ public class Obstacles : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             _playerController.Damage();
+            _collectPieces.ShowPiece();
             //destroi a peca que colidiu
             Destroy(this.gameObject);
         }
     }
 
-    private void Flip()
+    void Flip()
     {
         // direcao da obstaculo
         if (_playerController.isLookLeft)
         {
             direction = Vector3.right;
             transform.position += direction * speed * Time.deltaTime;
-            _spriteRenderer.flipX = false;
         }
         if(!_playerController.isLookLeft)
         {
             direction = Vector3.right;
             transform.position -= direction * speed * Time.deltaTime;
-            _spriteRenderer.flipX = true;
         }
     }
 }

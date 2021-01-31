@@ -13,7 +13,7 @@ public class CollectPieces : MonoBehaviour
     SoundController _soundController;
 
     int _countInactive;
-    public bool collected;
+    public int collected;
     public bool stopSpaw = false;
 
     [Header("HUD")]
@@ -48,7 +48,6 @@ public class CollectPieces : MonoBehaviour
                 _soundController.EffectSound("Piece");
                 _spriteRenderer[index].enabled = false;
                 _countInactive++;
-                collected = true;
                 PieceScore(_countInactive);
                 StartCoroutine(DisableCollected());
             }
@@ -62,8 +61,36 @@ public class CollectPieces : MonoBehaviour
 
     IEnumerator DisableCollected()
     {
-        yield return new WaitForSeconds(0.01f);
-        collected = false;
+        collected = 1;
+        yield return new WaitForSeconds(0.03f);
+        collected = 0;
+    }
+
+    public void ShowPiece()
+    {
+        if (_countInactive > 0)
+        {
+            int index = Random.Range(0, _spriteRenderer.Length);
+
+            if (!_spriteRenderer[index].enabled)
+            {
+                _spriteRenderer[index].enabled = true;
+                _countInactive--;
+                PieceScore(_countInactive);
+                StartCoroutine(EnableCollected());
+            }
+            else
+            {
+                ShowPiece();
+            }
+        }
+    }
+
+    IEnumerator EnableCollected()
+    {
+        collected = 2;
+        yield return new WaitForSeconds(0.03f);
+        collected = 0;
     }
 
     public void PieceScore(int result)
