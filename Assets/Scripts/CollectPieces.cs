@@ -11,6 +11,7 @@ public class CollectPieces : MonoBehaviour
 
     SpriteRenderer[] _spriteRenderer;
     SoundController _soundController;
+    PlayerController _playerController;
 
     int _countInactive;
     public int collected;
@@ -23,7 +24,10 @@ public class CollectPieces : MonoBehaviour
     {
         _spriteRenderer = GetComponentsInChildren<SpriteRenderer>();
         _soundController = FindObjectOfType(typeof(SoundController)) as SoundController;
+        _playerController = FindObjectOfType(typeof(PlayerController)) as PlayerController;
         _camera = Camera.main;
+
+        stopSpaw = false;
 
         PieceScore(0);
     }
@@ -56,6 +60,10 @@ public class CollectPieces : MonoBehaviour
         if (_countInactive == _spriteRenderer.Length)
         {
             stopSpaw = true;
+
+            _soundController.SceneMusic("Final");
+            _soundController.ChangeVolumeMusic(2f);
+            _playerController.Stop();
         }
     }
 

@@ -303,10 +303,12 @@ MonoBehaviour:
   musicSource: {fileID: 8899263601116374124}
   playlist:
   - {fileID: 8300000, guid: bc4309ffaf731b247a58de7a62143793, type: 3}
+  - {fileID: 8300000, guid: 2599cc8813058734eb7bd5c3b5fd3fce, type: 3}
+  - {fileID: 8300000, guid: ee18db6a21420e84c8bcfedfc340fadd, type: 3}
   soundlist:
   - {fileID: 8300000, guid: 2f474585e8a66514f9d21e783741a8b2, type: 3}
   - {fileID: 8300000, guid: 9065a6a8aed13f247856c6adccd1257c, type: 3}
   - {fileID: 8300000, guid: 092a989ad03878048b7797f05a7d3fd7, type: 3}
   - {fileID: 8300000, guid: 97cd2271f05f57345a1bfae8e46dd380, type: 3}
-  volumeMaxMusic: 0.2
+  volumeMaxMusic: 0.3
   volumeMaxFx: 1

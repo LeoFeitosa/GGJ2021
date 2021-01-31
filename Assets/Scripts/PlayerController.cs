@@ -140,4 +140,14 @@ public class PlayerController : MonoBehaviour
         this.gameObject.layer = LayerMask.NameToLayer("Player");
         _spriteRenderer.color = Color.white;
     }
+
+    public void Stop()
+    {
+        this.gameObject.layer = LayerMask.NameToLayer("Default");
+
+        if (Input.GetButtonDown("Jump") || Input.GetButton("Jump"))
+        {
+            _rigidbody2D.AddForce(Vector3.zero);
+        }
+    }
 }

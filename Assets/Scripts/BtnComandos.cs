@@ -6,6 +6,14 @@ using UnityEngine.SceneManagement;
 public class BtnComandos : MonoBehaviour
 {   
     public GameObject painel1, painel2;
+    SoundController _soundController;
+
+    void Start()
+    {
+        _soundController = FindObjectOfType(typeof(SoundController)) as SoundController;
+        _soundController.SceneMusic("Menu");
+        _soundController.ChangeVolumeMusic(0.6f);
+    }
 
     //Método que vai para a outra cena 
     public void IrParaCena(string nomeCena)

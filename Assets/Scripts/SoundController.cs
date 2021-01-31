@@ -28,8 +28,8 @@ public class SoundController : MonoBehaviour
 
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
         SceneMusic("Level1");
+        ChangeVolumeMusic(0.2f);
     }
 
     void ChangeMusic(AudioClip clip)

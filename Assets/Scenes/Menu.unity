@@ -198,7 +198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13532400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1203,7 +1203,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.05, y: 2.5}
-  m_SizeDelta: {x: 849.82446, y: 529.66614}
+  m_SizeDelta: {x: 1280, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &882988420
 MonoBehaviour:
@@ -1421,10 +1421,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 300469018, guid: 7c89ffcf25269d848ba808c7281cbde6, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 13532402}
     - target: {fileID: 8899263601994537652, guid: 7c89ffcf25269d848ba808c7281cbde6,
         type: 3}
       propertyPath: m_Name

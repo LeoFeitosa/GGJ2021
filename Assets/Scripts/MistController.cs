@@ -30,7 +30,7 @@ public class MistController : MonoBehaviour
         {
             transparence += 0.042f;
         }
-        if (transparence >= 1)
+        if (_spriteRenderer.color.a >= 1)
         {
             transparence = 1;
         }
@@ -44,7 +44,7 @@ public class MistController : MonoBehaviour
         {
             transparence -= 0.042f;
         }
-        if (transparence <= 0)
+        if (_spriteRenderer.color.a <= 0)
         {
             transparence = 0;
         }
