@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     PlayerAnimator _playerAnimator;
     SpriteRenderer _spriteRenderer;
     SoundController _soundController;
-    CollectPieces _collectpieces;
 
     //forca do pulo
     [SerializeField]
@@ -51,7 +50,6 @@ public class PlayerController : MonoBehaviour
         _playerAnimator = GetComponentInChildren<PlayerAnimator>();
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         _soundController = FindObjectOfType(typeof(SoundController)) as SoundController;
-        _collectpieces = FindObjectOfType(typeof(CollectPieces)) as CollectPieces;
     }
 
     // Update is called once per frame
@@ -119,7 +117,6 @@ public class PlayerController : MonoBehaviour
     {
         _soundController.EffectSound("Damage");
         StartCoroutine(DamageController());
-        _collectpieces.PieceScore(2);
     }
 
     IEnumerator DamageController()

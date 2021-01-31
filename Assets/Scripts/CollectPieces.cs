@@ -24,11 +24,6 @@ public class CollectPieces : MonoBehaviour
         PieceScore(0);
     }
 
-    void Update()
-    {
-        //collected = false;
-    }
-
     public void HidePiece()
     {
         if (_countInactive < _spriteRenderer.Length)
