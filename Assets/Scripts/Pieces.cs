@@ -37,8 +37,6 @@ public class Pieces : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            _playerController.Flip();
-
             _collectPieces.HidePiece();
 
             //rotaciona a camera

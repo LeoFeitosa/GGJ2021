@@ -49,6 +49,7 @@ public class CollectPieces : MonoBehaviour
             }
             else
             {
+                _playerController.Flip();
                 _soundController.EffectSound("Piece");
                 _spriteRenderer[index].enabled = false;
                 _countInactive++;

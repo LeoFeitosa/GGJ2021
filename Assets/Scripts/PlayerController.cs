@@ -113,7 +113,6 @@ public class PlayerController : MonoBehaviour
         float x = transform.localScale.x * -1;
         transform.localScale = new Vector3(x, transform.localScale.y, transform.localScale.z);
         _cameraRotate.Invert(isLookLeft);
-        print("aqui");
     }
 
     public void Damage()
