@@ -20,7 +20,6 @@ public class MistController : MonoBehaviour
     {
         Show();
         Hide();
-        print(_collectPieces.collected);
     }
 
 
@@ -29,13 +28,12 @@ public class MistController : MonoBehaviour
         if (_collectPieces.collected == 2)
         {
             transparence += 0.042f;
+            _spriteRenderer.color = new Color(1f, 1f, 1f, transparence);
         }
         if (_spriteRenderer.color.a >= 1)
         {
             transparence = 1;
         }
-
-        _spriteRenderer.color = new Color(1f, 1f, 1f, transparence);
     }
 
     void Hide()
@@ -43,6 +41,7 @@ public class MistController : MonoBehaviour
         if (_collectPieces.collected == 1)
         {
             transparence -= 0.042f;
+            _spriteRenderer.color = new Color(1f, 1f, 1f, transparence);
         }
         if (_spriteRenderer.color.a <= 0)
         {
