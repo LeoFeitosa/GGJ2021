@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5952774790555821030}
   - component: {fileID: 5952774790555821029}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: peca_ (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5952774790636118729}
   - component: {fileID: 5952774790636118728}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: peca_ (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5952774790763183141}
   - component: {fileID: 5952774790763183140}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: peca_ (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5952774790890022426}
   - component: {fileID: 5952774790890022425}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: peca_ (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5952774791048369371}
   - component: {fileID: 5952774791048369370}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: peca_ (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5952774791067015474}
   - component: {fileID: 5952774791067015473}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: peca_ (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -496,7 +496,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5952774791119210506}
   - component: {fileID: 5952774791119210505}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: peca_ (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -577,7 +577,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5952774791198650777}
   - component: {fileID: 5952774791198650776}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: peca_ (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -658,7 +658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5952774791512974129}
   - component: {fileID: 5952774791512974128}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: peca_ (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,7 +739,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5952774791850273816}
   - component: {fileID: 5952774791850273823}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: peca_ (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -820,7 +820,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5952774792199081429}
   - component: {fileID: 5952774792199081428}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: peca_ (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -901,7 +901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5952774792348747315}
   - component: {fileID: 5952774792348747314}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: peca_ (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -982,7 +982,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5952774792471656106}
   - component: {fileID: 5952774792471656105}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: PiecesBlack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1030,4 +1030,3 @@ MonoBehaviour:
   collected: 0
   stopSpaw: 0
   scoreTxt: {fileID: 0}
-  score: 0
