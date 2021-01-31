@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     PlayerAnimator _playerAnimator;
     SpriteRenderer _spriteRenderer;
     SoundController _soundController;
+    CameraRotate _cameraRotate;
 
     //forca do pulo
     [SerializeField]
@@ -50,6 +51,7 @@ public class PlayerController : MonoBehaviour
         _playerAnimator = GetComponentInChildren<PlayerAnimator>();
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         _soundController = FindObjectOfType(typeof(SoundController)) as SoundController;
+        _cameraRotate = FindObjectOfType(typeof(CameraRotate)) as CameraRotate;
     }
 
     // Update is called once per frame
@@ -110,7 +112,7 @@ public class PlayerController : MonoBehaviour
         isLookLeft = !isLookLeft;
         float x = transform.localScale.x * -1;
         transform.localScale = new Vector3(x, transform.localScale.y, transform.localScale.z);
-        transform.position = new Vector3(-transform.position.x, transform.position.y, transform.position.z);
+        _cameraRotate.Invert(isLookLeft);
     }
 
     public void Damage()

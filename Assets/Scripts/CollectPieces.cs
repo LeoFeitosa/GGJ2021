@@ -6,6 +6,9 @@ using TMPro;
 
 public class CollectPieces : MonoBehaviour
 {
+    [SerializeField]
+    Camera _camera;
+
     SpriteRenderer[] _spriteRenderer;
     SoundController _soundController;
 
@@ -20,8 +23,14 @@ public class CollectPieces : MonoBehaviour
     {
         _spriteRenderer = GetComponentsInChildren<SpriteRenderer>();
         _soundController = FindObjectOfType(typeof(SoundController)) as SoundController;
+        _camera = Camera.main;
 
         PieceScore(0);
+    }
+
+    void Update()
+    {
+        transform.position = new Vector3(_camera.transform.position.x - 0.3f, 0, 0);
     }
 
     public void HidePiece()
