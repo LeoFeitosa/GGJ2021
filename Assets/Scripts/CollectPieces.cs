@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CollectPieces : MonoBehaviour
 {
@@ -11,10 +12,16 @@ public class CollectPieces : MonoBehaviour
     public bool collected;
     public bool stopSpaw = false;
 
+    [Header("HUD")]
+    public Text scoreTxt;
+    public int score;
+
     void Start()
     {
         _spriteRenderer = GetComponentsInChildren<SpriteRenderer>();
         _soundController = FindObjectOfType(typeof(SoundController)) as SoundController;
+
+        scoreTxt.text = score.ToString() + " de 12";
     }
 
     void Update()
@@ -38,6 +45,7 @@ public class CollectPieces : MonoBehaviour
                 _spriteRenderer[index].enabled = false;
                 _countInactive++;
                 collected = true;
+                PieceScore(1);
                 StartCoroutine(DisableCollected());
             }
         }
@@ -53,4 +61,18 @@ public class CollectPieces : MonoBehaviour
         yield return new WaitForSeconds(0.01f);
         collected = false;
     }
+
+    public void PieceScore(int result)
+    {
+        if(result == 1)
+        {
+            score += 1;
+            scoreTxt.text = score.ToString() + " de 12";
+        } else if (result == 2) 
+        {
+            score -= 1;
+            scoreTxt.text = score.ToString() + " de 12";
+        }
+    }
+
 }

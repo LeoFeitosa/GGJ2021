@@ -1,13 +1,13 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pieces : MonoBehaviour
 {
     PlayerController _playerController;
     CameraRotate _cameraRotate;
     CollectPieces _collectPieces;
-    SoundController _soundController;
 
     //velocidade do movimento
     [SerializeField]
@@ -24,7 +24,6 @@ public class Pieces : MonoBehaviour
         _playerController = FindObjectOfType(typeof(PlayerController)) as PlayerController;
         _cameraRotate = FindObjectOfType(typeof(CameraRotate)) as CameraRotate;
         _collectPieces = FindObjectOfType(typeof(CollectPieces)) as CollectPieces;
-        _soundController = FindObjectOfType(typeof(SoundController)) as SoundController;
     }
 
     void Update()
@@ -51,18 +50,11 @@ public class Pieces : MonoBehaviour
 
     private void RotateRandom()
     {
-        _soundController.EffectSound("Rotate");
-
         //pega um numero qualquer dos que estão preechidos
         int position = positions[Random.Range(0, positions.Length)];
 
         //rotaciona a camera
         _cameraRotate.Rotate(position);
-
-        if (_collectPieces.stopSpaw)
-        {
-            StartCoroutine(PositionCamereDefault());
-        }
     }
 
     private void Flip()
@@ -78,11 +70,5 @@ public class Pieces : MonoBehaviour
             direction = Vector3.right;
             transform.position -= direction * speed * Time.deltaTime;
         }
-    }
-
-    IEnumerator PositionCamereDefault()
-    {
-        _cameraRotate.Rotate(0);
-        yield return new WaitForSeconds(4f);
     }
 }
