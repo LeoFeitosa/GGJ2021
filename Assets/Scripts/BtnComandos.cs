@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class BtnComandos : MonoBehaviour
 {   
-
     public GameObject painel1, painel2;
 
     //Método que vai para a outra cena 
