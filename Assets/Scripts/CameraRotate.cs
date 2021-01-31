@@ -50,15 +50,26 @@ public class CameraRotate : MonoBehaviour
 
     public void Rotate(int position)
     {
+        int rand = Random.Range(0, 100);
+
         angle = position;
 
-        Vector3 direction = new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, angle);
-        targetRotation = Quaternion.Euler(direction);
+        Vector3 direction = Vector3.zero;
+
+        if (rand > 50)
+        {
+            direction = new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, angle);
+            targetRotation = Quaternion.Euler(direction * -1);
+        }
+        else
+        {
+            direction = new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, angle);
+            targetRotation = Quaternion.Euler(direction);
+        }
     }
 
     public void Invert(bool Xinvert)
     {
-        print("invert");
         invert = Xinvert;
     }
 }
